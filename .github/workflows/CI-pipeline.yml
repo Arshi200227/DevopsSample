@@ -23,5 +23,6 @@ jobs:
         - name: .run tests
           run: |
             mkdir -p test-results
-            npm test -- --reporter mocha-juint-reporter --reporter-options mochaFile=./test-results/results.xml
+            npm test -- --reporter mocha-junit-reporter --reporter-options mochaFile=./test-results/results.xml
+ 
           
