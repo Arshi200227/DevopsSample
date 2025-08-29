@@ -30,4 +30,16 @@ jobs:
           with:
             name: test-results-artifact
             path: test-results/results.xml
+
+        - name : run code quality using eslint
+          run: 
+            set -o pipeline
+            npx eslint . --ext .js,.jsx,.ts,.tsx --exit-on-fatal-error -f stylish | tee lint-report.txt
+
+        - name: publish code quality tests
+          uses: actions/upload-artifact@v4.6.2
+          with:
+            name: eslint-code-quality-artifacts
+            path: lint-report .txt
+ 
         
