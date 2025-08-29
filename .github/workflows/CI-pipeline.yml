@@ -4,10 +4,12 @@ on:
     branches: [Dev]
   pull_request:
     branches: [Dev]
+    
+jobs:
 
-Jobs:
   build:
     runs-on: ubuntu-latest
+    
     steps:
       
         - name: checkout code
