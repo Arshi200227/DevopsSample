@@ -8,7 +8,7 @@ on:
 Jobs:
   build:
     runs-on: ubuntu-latest
-      steps:
+    steps:
       
         - name: checkout code
           uses: actions/checkout@v5.0.0
